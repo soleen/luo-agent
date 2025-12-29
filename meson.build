@@ -38,7 +38,9 @@ static_link_args = ['-static']
 
 # Daemon (luod)
 executable('luod',
-  sources : ['src/daemon/main.c', common_src],
+  sources : [ 'src/daemon/main.c',
+              'src/daemon/server.c',
+              common_src],
   dependencies : [json_dep, thread_dep],
   include_directories : inc_dirs,
   link_args : static_link_args,
