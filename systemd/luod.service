@@ -1,0 +1,14 @@
+[Unit]
+Description=Live Update Orchestrator Daemon
+DefaultDependencies=no
+After=basic.target
+Before=shutdown.target
+
+[Service]
+ExecStart=/usr/sbin/luod
+Type=simple
+KillMode=none
+RefuseManualStop=yes
+
+[Install]
+WantedBy=multi-user.target
